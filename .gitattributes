@@ -1,0 +1,5 @@
+*.png filter=lfs diff=lfs merge=lfs -text
+*.PNG filter=lfs diff=lfs merge=lfs -text
+*.ipynb filter=lfs diff=lfs merge=lfs -text
+C:/upload/hankyungIT filter=lfs diff=lfs merge=lfs -text
+C:/upload/hankyungIT/img.PNG filter=lfs diff=lfs merge=lfs -text
