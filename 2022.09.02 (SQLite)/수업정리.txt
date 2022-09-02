@@ -1,0 +1,94 @@
+1. INSERT
+   INSERT INTO 테이블명 (컬럼명) VALUES (값)
+
+2. 열값의 자동증가
+INSERT INTO Person (ID, Name, Birthday) VALUES (1, '이혜리', '1994-06-09');
+INSERT INTO Person (Name, Birthday) VALUES ('이혜리', '1994-06-09); --> ??
+* 맨 마지막열 혹은 그 열의 Max값 +1로 예상했는데 예측불가. 값은 unique하지만
+  값을 예측해야하는 상황에서는 사용하면 안됨.
+
+3. SELECT
+   5) SELECT 컬럼명 as "Alias명" --> 별칭 (개발자 값으로 불러올때), 함수(산술식)
+   1) FROM 테이블명
+   2) WHERE 조건명
+   3) GROUP BY 컬럼명
+   4) HAVING 조건명
+   6) ORDER BY 컬럼명
+   * 실행순서.
+   1) 테이블을 선택한다 (1개이상)
+   2) WHERE 조건에 맞는 ROW를 선택한다
+   3) 조건에 맞는 ROW들 중에서 컬럼값으로 그룹을 만든다
+   4) 그룹값 중에서 조건에 맞는 ROW를 선택한다
+   5) 최종 선택된 ROW에서 특정 컬럼만 선택한다
+   6) 선택된 특정컬럼을 출력순서를 정한다
+   -- 2번부터 6번은 옵션, 4번은 3번을 써야만 가능
+
+   SELECT SUM(*) as sum from Person
+   -> 파이썬 변수명 만드는 규칙 (Camel Case, Pascal, underline)
+       sportsCar, SportsCar, sports_car
+
+4. ORDER BY 컬럼명 ASC or DESC, 컬럼명 ASC or DESC...
+   - 컬럼명의 출력순서는 숫자,영문자는 정확히 표현, 그외는 검토/확인
+
+5. Expr
+
+   if name = '홍길동':
+   if name == '홍길동':
+   if name != '홍길동':
+   if name <> '홍길동':
+   if name === '홍길동:
+   언어별로 표시하는 방법이 조금씩 다르다.
+
+6. UPDATE or DELETE 실행하기 전에 무조건 WHERE 조건에 있는 것을
+   SELECT문에서 해보고 그 다음에 실행 (중요)
+
+7. DML = Select, Insert, Update, Delete
+   DDL = Create... / Alter...
+   CRUD = Create, Retrieve, Update, Delete
+
+8. Table 변경
+   - 데이터가 있을 때
+     - 신규 컬럼을 추가할때
+     - 기존 컬럼을 변경할때
+       데이터 크기가 큰데 작은걸로 바꿀경우
+       데이터 크기가 작은데 큰걸로 바꿀경우
+
+   - 데이터가 없을 때
+     - 신규 컬럼을 추가할때
+     - 기존 컬럼을 변경할때
+
+9. 테이블 삭제 & 테이블 데이터만 삭제
+   - 테이블 삭제 : Drop table...
+   - 데이터만 삭제 : Truncate, delete from
+
+10. Alias (별명, 별칭)
+    - 컬럼 Alias : sum() 변수이름으로 사용하기 힘든 이름을 별칭을 사용해서 변경
+    - 테이블 Alias : 축약
+
+Employees Table, Salgrade Table
+- 회원테이블에 있는 Salary를 조사하고, 그 Salary를 등급으로 표시하세요.
+
+select Employees.name, Employees.salary, Salgrade.grade
+from Employees, Salgrade
+where Emplyees.salary < Salgrade.hisal and Employees.salary > Salgrade.losal
+
+select e.name, e.salary, s.grade
+from Employees e, Salgrade s
+where e.salary < s.hisal and e.salary > s.losal
+
+11. View (뷰)
+    - Employee의 연봉이 민감해서 그것만 빼고 따로 뷰를 만드는 거
+    - Table이다.. (개발자 입장에선)
+    - 데이터를 저장하는게 아니고, SQL 저장하고 있음
+
+12. Date and Time
+    - ISO8601
+    - Julian day : 365일
+    - Greenwich
+    - Unix Time : (1970-01-01 00:00:00)부터 초로 바꾼거
+    - UTC (1970-01-01 00:00:00) : Universal Time Coordinated, 세계 협정시
+      GMT
+
+커머스, 물류, 금융
+
+
