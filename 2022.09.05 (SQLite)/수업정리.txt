@@ -1,0 +1,50 @@
+RDBMS -> Relational (table), 자료저장
+
+opensource -> WEB2.0 (개발,참여,공유)
+                - Mysql - MariaDB
+
+SQL -> DDL, DML(CRUD)
+
+Oracle -> 티베로
+
+table - row, column (기본 처리단위 row)
+조회 (SELECT)
+  5 SELECT
+  1 FROM (T)
+  2 WHERE (C)
+  3 GROUP BY
+  4 HAVING
+  6 ORDER BY
+
+RDBMS (t1, t2, t3), 특성(중복방지), join
+FROM 테이블명 AS 테이블Alias (기준이 되는 테이블을 맨 처음에)
+
+조인을 하면 FROM, WHERE 세트로 사용 (테이블이 1개가 됨)
+
+디자인 패턴 (Best Practice)
+
+조인 관계 (EQ, nonEQ, LEFT, RIGHT)
+
+34 GROUP BY HAVING
+5 SELECT
+6 ORDER BY
+
+ERD: 시스템의 엔티티들이 무엇이 있는지 어떤 관계가 있는지를 나타내는 다이어그램
+
+EQ 조인(이퀄 조인)
+Non-EQ 조인 : > < !=
+Outter 조인 : LEFT, RIGHT (EQ 조인 + NULL 처리)
+SELF 조인 : 한개의 테이블을 여러개인것 처럼 처리, 조직도 등
+
+1. 집계함수에서의 NULL 처리 -- NULL 제외
+   산술연산에서의 NULL 처리 -- 숫자+NULL = NULL
+
+
+
+
+
+
+
+
+
+
