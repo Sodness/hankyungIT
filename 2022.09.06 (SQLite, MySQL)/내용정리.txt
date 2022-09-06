@@ -1,0 +1,102 @@
+1. openAPI
+   - data.go.kr : 국가운영 (전체 데이터는 아님)
+   - Fetch 방법 : XML or Json 형태 자동연동
+                     CSV형태로 다운로드 해서 사용
+
+   * Human Readable
+     - Text (TXT), XML, JSON, CSV ...
+     - XML (eXtensible Markup Language) : <tag> 태그로 이루어져 있고,
+                                                      열면 닫아야 하고
+                                                      <tag>값</tage>
+       --> JSON (JavaScript Object Notation)
+            { "name" : "홍길동" }
+       HTML (Hyper Text Markup Language)
+       MarkDown
+     - CSV (Comma Seperated Value) : \t (tab)
+
+2. Encoding / Decoding
+   - Encoding : 코드화(Base64, QuotedPrintable, UTF-8..)
+                   암호화(3DES/AES..) ... TEXT/CSV/JSON/XML --> HumanReadable
+     자료공유시에 깨지지 않도록..  "가나다" -- ??? ASCII -- "가나다"
+   - ISO-8859-1
+
+3. ERD (테이블간의 관계)
+   Table 정의서 (테이블 설명 - 컬럼에 대한 상세설명)
+
+4. Import / Export
+
+5. 
+    SELECT DISTINCT 컬럼명 (중복된 데이터는 빼고)
+    FROM 테이블명
+    WHERE 조건식
+    GROUP BY 컬럼명
+    HAVING 조건식
+    ORDER BY 컬럼명
+
+` back quote 
+' single quote
+" double quote
+
+6. SubQuery
+   서브쿼리란 다른 쿼리 내부에 포함되어 있는 SELECT 문을 의미합니다.
+   서브쿼리를 포함하고 있는 쿼리를 외부쿼리라고 부르며, 
+   서브쿼리는 내부쿼리라고도 부릅니다.
+   서브쿼리는 반드시 괄호로 감싸져 있어야만 합니다.
+
+   5) SELECT 컬럼명
+   1) FROM 테이블명, 서브쿼리 테이블 (Inline View) -- 실시간으로 만들어짐
+   2) WHERE 조건식 (기준 연산자 비교대상 -- 서브쿼리)
+                NAME IN ('홍길동', '김길동')
+                NAME IN (select name from 멤버 where name like '김%') (여러명 일 수 있으니 IN으로)
+                NAME = (select name from 멤버 where name like '김%') (1명이면 가능)
+   3) Group By
+   4) Having
+   6) Order by
+
+
+    select 시도명, 시군구명, 매장수, 인구수, 인구수/매장수 as 매장당인구수
+    from (select 시도명, 시군구명, count(*) 매장수
+            from 상가업소정보_201912
+            where 시도명 in ('서울특별시', '경기도', '인천광역시') and 상호명 like '공차%'
+             group by 시도명, 시군구명) 매장,
+
+            (select 행정구역, replace(`2020년01월_총인구수`, ',', '') as 인구수               --- 콤마 제거
+             from 주민등록인구및세대현황) 인구
+    where 인구.행정구역 like 매장.시도명 || ' ' || 매장.시군구명 || '%'
+
+* 매장 / 인구 테이블 생성 (Inline View 형태 - 실시간)
+* 인구,행정구역하고 매장시군구를 Join함
+* 시도명, 시군구명, 매장수, 인구수, 인구수/매장수 as 매장당인구수
+  -> 매장.시도명, 매장.시군구명, 매장.매장수, 인구.인구수, 인구.인구수/매장.매장수 as 매장당인구수
+
+7. 사용자 계정
+   - root (리눅스 계열 super suer)
+   - administrator (윈도운 계열 super user)
+
+8. network 사용 포트
+   - 3306 (TCP/IP) Mysql, Mariadb
+   - 1521 (TCP/IP) Oracle
+
+9. Mysql 설치가 끝나면 
+   - root로 접속을 해서 
+     1) Database를 만들고 
+     2) User를 만들고 
+     3) 접속권한등을 만들고 
+     4) Database하고 User를 Mapping시키고 
+     5) 새로만든 User를 사용하여 접속하고
+   * 내 PC를 가리키는 방법 3가지 (network상에서)
+     - 127.0.0.1 (loopback)
+     - localhost
+     - 내 ip (cmd에서 ipconfig)
+
+
+
+
+
+
+
+
+
+
+
+

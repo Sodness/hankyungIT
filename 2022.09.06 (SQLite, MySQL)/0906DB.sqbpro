@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/hjk70/Downloads/임시폴더/0906DB.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="5157"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainJumin"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Jumin" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="182"/><column index="2" value="133"/><column index="3" value="119"/><column index="4" value="147"/><column index="5" value="147"/><column index="6" value="147"/><column index="7" value="133"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Seoul" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="92"/><column index="2" value="264"/><column index="3" value="150"/><column index="4" value="134"/><column index="5" value="120"/><column index="6" value="134"/><column index="7" value="149"/><column index="8" value="134"/><column index="9" value="162"/><column index="10" value="120"/><column index="11" value="259"/><column index="12" value="64"/><column index="13" value="72"/><column index="14" value="78"/><column index="15" value="64"/><column index="16" value="78"/><column index="17" value="86"/><column index="18" value="78"/><column index="19" value="77"/><column index="20" value="94"/><column index="21" value="92"/><column index="22" value="78"/><column index="23" value="78"/><column index="24" value="78"/><column index="25" value="228"/><column index="26" value="78"/><column index="27" value="218"/><column index="28" value="78"/><column index="29" value="78"/><column index="30" value="96"/><column index="31" value="208"/><column index="32" value="232"/><column index="33" value="78"/><column index="34" value="78"/><column index="35" value="50"/><column index="36" value="50"/><column index="37" value="50"/><column index="38" value="83"/><column index="39" value="85"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="tmp" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="22"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="소상공인시장진흥공단_상가(상권)정보_서울_202206" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="92"/><column index="2" value="264"/><column index="3" value="150"/><column index="4" value="134"/><column index="5" value="120"/><column index="6" value="134"/><column index="7" value="149"/><column index="8" value="134"/><column index="9" value="162"/><column index="10" value="120"/><column index="11" value="259"/><column index="12" value="64"/><column index="13" value="72"/><column index="14" value="78"/><column index="15" value="64"/><column index="16" value="78"/><column index="17" value="86"/><column index="18" value="78"/><column index="19" value="77"/><column index="20" value="94"/><column index="21" value="92"/><column index="22" value="78"/><column index="23" value="78"/><column index="24" value="78"/><column index="25" value="228"/><column index="26" value="78"/><column index="27" value="218"/><column index="28" value="78"/><column index="29" value="78"/><column index="30" value="96"/><column index="31" value="208"/><column index="32" value="232"/><column index="33" value="78"/><column index="34" value="78"/><column index="35" value="50"/><column index="36" value="50"/><column index="37" value="50"/><column index="38" value="83"/><column index="39" value="85"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">select count(*) from Seoul;
+
+select 법정동명 from Seoul;
+
+select distinct 법정동명 from Seoul;
+
+select count(*)
+from Seoul
+where 상호명 like '공차%';
+
+select 상호명, 시도명, 시군구명, 행정동명
+from Seoul
+where 상호명 like '공차%'
+order by 시군구명 ASC, 행정동명 ASC;
+
+
+
+
+
+
+
+
+</sql><sql name="SQL 2">/* group by 규칙 : group by 옆에 쓴 컬럼형태 함수쓴것도 똑같이 */
+select 시군구명, count(*) as 개수
+from Seoul
+where 상호명 like '공차%'
+group by 시군구명
+
+select 시군구명, count(*) as 매장수
+from Seoul
+where 상호명 like '공차%'
+group by 시군구명
+order by 매장수 desc;
+
+select 시도명, 시군구명 , count(*) as 매장수
+from Seoul
+where 상호명 like '공차%'
+group by 시도명, 시군구명
+order by 매장수 desc;
+
+
+
+
+
+</sql><sql name="SQL 3">select 행정구역, `2022년06월_총인구수` as 인구수 from Jumin;
+
+select *
+from (select 시도명, 시군구명 , count(*) as 매장수
+      from Seoul
+      where 상호명 like '공차%'
+      group by 시도명, 시군구명
+      order by 매장수 desc) 매장,
+	  (select 행정구역, `2022년06월_총인구수` as 인구수 
+	  from Jumin) 인구
+where 인구.행정구역 like 매장.시도명 || ' ' || 매장.시군구명 || '%';
+
+select 시도명, 시군구명 , count(*) as 매장수
+from Seoul
+where 상호명 like '공차%'
+group by 시도명, 시군구명
+order by 매장수 desc;
+
+select 시도명, 시군구명, count(*) as 매장수
+from Seoul
+where 상호명 like '공차%'
+group by 시도명, 시군구명
+order by 매장수 desc;</sql><sql name="SQL 4">select *
+from (select 시도명, 시군구명 , count(*) as 매장수
+      from Seoul
+      where 상호명 like '공차%'
+      group by 시도명, 시군구명
+      order by 매장수 desc) 매장,
+	  (select 행정구역, `2022년06월_총인구수` as 인구수 
+	  from Jumin) 인구
+where 인구.행정구역 like 매장.시도명 || ' ' || 매장.시군구명 || '%';
+
+select 시도명, 시군구명, 매장수, 인구수, 인구수/매장수 as 매장당인구수
+from (select 시도명, 시군구명 , count(*) as 매장수
+      from Seoul
+      where 상호명 like '공차%'
+      group by 시도명, 시군구명
+      order by 매장수 desc) 매장,
+	  (select 행정구역, replace(`2022년06월_총인구수`, ',', '') as 인구수
+	  from Jumin) 인구
+where 인구.행정구역 like 매장.시도명 || ' ' || 매장.시군구명 || '%';
+
+select *
+from (
+    select 시도명, 시군구명, 매장수, 인구수, 인구수/매장수 as 매장당인구수
+    from
+    (select 시도명, 시군구명, count(*) 매장수
+     from Seoul
+     where 시도명 in ('서울특별시') and 상호명 like '공차%'
+     group by 시도명, 시군구명) 매장,
+    (select
+         행정구역,
+         replace(`2022년06월_총인구수`, ',', '') as 인구수               --- 콤마 제거
+     from Jumin) 인구
+    where 인구.행정구역 like 매장.시도명 || ' ' || 매장.시군구명 || '%'
+)
+order by 매장당인구수 asc;
+
+
+      </sql><current_tab id="3"/></tab_sql></sqlb_project>
