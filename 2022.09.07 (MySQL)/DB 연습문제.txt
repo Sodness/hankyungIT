@@ -1,0 +1,223 @@
+1) emp 테이블에서 사원번호, 사원이름, 월급을 출력하시오 .
+
+select empno, ename, sal  from emp
+
+2) emp 테이블에서 사원이름과 월급을 출력하는데 컬럼명은 이름, 월급으로 변경하여 출력하시오. -- alias
+
+select ename as "이름", sal as "월급" from emp
+
+3) emp 테이블에서 사원번호 사원이름 월급 연봉을 구하고 각각 컬럼명을 사원번호, 사원이름, 월급으로 변경하여 출력하시오.
+
+select empno as "사원번호", ename as "사원이름", sal as "월급", sal*12 as "연봉" from emp
+
+4) emp 테이블에서 업무(job)를 중복되지 않게 표시하시오.
+
+select job from emp
+
+select distinct  job from emp
+
+select job from emp group by job 
+
+5) emp Table의 사원명과 업무로 연결해서 표시하고 컬럼명은 Employee and Job로 표시하시오.
+
+select concat(ename , "-", job) as "Employee and Job" from emp
+
+select concat (ename , concat ("-",job)) as "Employee and Job" from emp
+
+
+6) emp 테이블에서 사원번호가 7698 인 사원의 이름, 업무, 급여를 출력하시오.
+
+select ename,job,sal from emp where empno = 7698 
+
+7) emp 테이블에서 사원이름이 SMITH인 사람의 이름과 월급, 부서번호를 구하시오.
+
+select sal, deptno from emp where ename = 'smith'
+select sal, deptno from emp where lower(ename) = lower('smith')
+
+SmItH
+
+select sal, deptno from emp where ename = 'SMITH'
+select sal, deptno from emp where upper(ename) = 'SMITH'
+
+-- 무조건 소문자로 바꿔라 (LOWER())
+-- 무조건 대문자로 바꿔라 (UPPER())
+
+8) 월급이 2500이상 3500미만인 사원의 이름, 입사일, 월급을 구하시오.
+
+select ename, hiredate ,sal from emp where sal >= 2500 and sal < 3500
+
+select * from emp where sal between 2500 and 3500
+
+9) 급여가 2000에서 3000사이에 포함되지 않는 사원의 이름, 업무, 급여를 출력하시오.
+
+select ename,job,sal from emp where sal not between 2000 and 3000 
+
+
+10) 81년 05월 01일과 81년 12월 03일 사이에 입사한 사원의 이름, 급여, 입사일을 출력하시오.
+select hiredate from emp 
+
+select hiredate from emp where hiredate = '1980-12-17'
+
+select hiredate from emp where hiredate >= '1981-05-01' and hiredate <= '1981-12-03'
+
+select hiredate , hiredate+15 from emp 
+
+
+11) emp테이블에서 사원번호가 7566,7782,7934인 사원을 제외한 사람들의 사원번호,이름,  월급을 출력하시오.
+
+select empno,ename,sal from emp where empno not in (7566,7782,7934)
+
+12) 부서번호 30(deptno)에서 근무하며 월 2,000달러 이하를 받는 81년05월01일 이전에 입사한 사원의 이름, 급여, 부서번호, 입사일을 출력하시오.
+
+select ename,sal,deptno,hiredate from emp where deptno = 30 and sal <= 2000 and hiredate < '1981-05-01'
+
+13) emp테이블에서 급여가 2,000와 5,000 사이고 부서번호가 10 또는 30인 사원의 이름과 급여,부서번호를 나열하시오.
+
+select ename,sal,deptno from emp where sal between 2000 and 5000 and deptno in (10,30)
+
+select ename,sal,deptno from emp where (sal between 2000 and 5000) and deptno in (10,30)
+
+select ename,sal,deptno from emp 
+
+14) 업무가 SALESMAN 또는 MANAGER이면서 급여가 1,600, 2,975 또는 2,850이 아닌 모든 사원의 이름, 업무 및 급여를 표시하시오.
+
+select ename,job,sal from emp where job in ('SALESMAN','MANAGER') and sal not in (1600,2975,2850)
+
+select ename,job,sal from emp where (job = 'SALESMAN' or job = 'MANAGER') and 
+                                    (sal <> 1600 and sal <> 2975 and sal <> 2850)
+
+
+select ename as 이름, job as 업무, sal as 급여 from emp
+where (job = 'SALESMAN'or job='MANAGER') and sal not in (1600,2975,2850)
+
+15) emp테이블에서 사원이름 중 S가 포함되지 않은 사람들 중 부서번호가 20인 사원들의 이름과 부서번호를 출력하시오.
+
+select * from emp where ename not like '%S%' 
+
+select * from emp where ename not like '%S%' and deptno =20
+
+16) emp테이블에서 이름에 A와 E가 있는 모든 사원의 이름을 표시하시오.
+
+select * from emp where ename like '%A%' and ename like '%E%'
+
+
+17) emp테이블에서 관리자가 없는 모든 사원의 이름과 업무를 표시하시오.
+
+select * from emp where mgr is null
+
+select * from emp where mgr = null
+
+
+18) emp테이블에서 커미션 항목이 입력된 사원들의 이름과 급여, 커미션을 구하시오.
+
+select * from emp where comm is not null
+
+select * from emp where comm is not null and comm <> 0
+
+19) 부서별 평균월급여를 구하는 쿼리
+
+select deptno, round(avg(sal),1) from emp group by deptno
+
+부서번호, 부서명, 부서평균월급여(소수점1자리)
+
+select e.deptno , d.dname , round(avg(sal),1)  from emp e , dept d 
+                   where e.deptno = d.deptno group by e.deptno
+
+                   
+select d.deptno , d.dname , dd.avgsal 
+from dept d, ( select deptno, round(avg(sal),1) as avgsal from emp group by deptno ) dd 
+where d.deptno = dd.deptno
+
+
+20) 부서별 전체 사원수와 커미션을 받는 사원들의 수를 구하는 쿼리
+
+select count(*) from emp e 
+
+select count(*) from emp where comm is not null
+
+select count(*) , count(comm) from emp 
+
+select deptno , count(*) , count(comm) from emp group by deptno 
+
+
+21) 부서별 최대 급여와 최소 급여를 구하는 쿼리
+
+select max(sal) , min(sal) from emp 
+
+select deptno, max(sal) , min(sal) from emp group by deptno 
+
+
+22) 부서별로 급여 평균 (단, 부서별 급여 평균이 2000 이상만)
+
+select deptno , round(avg(sal)) from emp group by deptno
+
+select deptno , round(avg(sal)) from emp group by deptno having avg(sal) >= 2000
+
+-- 단, 매니저 직급은 제외 
+select deptno , round(avg(sal)) 
+from emp 
+where job <> 'MANAGER' 
+group by deptno having avg(sal) >= 2000                    
+
+
+23) 월급여가 1000 이상인 사원만을 대상으로 부서별로 월급여 평균을 구하라. 단, 평균값이 2000 이상인 레코드만 구하라
+select deptno, round(avg(sal))
+from emp 
+where sal >= 1000 
+group by deptno 
+having avg(sal) >= 2000
+
+24) 내사번, 내이름,직속상사사번, 직속상사이름을 조회하시오. (self join)
+
+select * from emp 
+
+select e.empno,e.ename, e2.empno, e2.ename 
+from emp e , emp e2 
+where e.mgr = e2.empno 
+
+-- 상사별 소속직원수
+select e2.ename , count(*) 
+from emp e , emp e2 
+where e.mgr = e2.empno 
+group by e2.ename
+
+
+25) 사원명 'JONES'가 속한 부서명을 조회하시오.
+
+select deptno from emp where ename = 'JONES'
+
+select * from dept 
+where deptno = (select deptno from emp where ename = 'JONES')
+
+select * from dept d , (select deptno from emp where ename = 'JONES') dd 
+where d.deptno  = dd.deptno
+
+26) 사원별 salary 등급 및 부서이름을 표시하세요 (Non-EQ join)
+
+select e.ename, e.sal, s.grade from emp e , salgrade s 
+where e.sal >= s.losal and e.sal <= s.hisal 
+
+select e.ename, e.sal, s.grade  from emp e , salgrade s 
+where e.sal between s.losal and s.hisal 
+
+select e.ename, e.sal, s.grade , d.dname from emp e , salgrade s , dept d
+where e.sal between s.losal and s.hisal and e.deptno = d.deptno 
+
+
+
+-- grade별로 최고 월급자는 ? 
+select s.grade , max(e.sal)
+from emp e , salgrade s 
+where e.sal between s.losal and s.hisal 
+group by s.grade 
+order by s.grade
+
+
+27) DALLAS에서 근무하는 사원의 이름,직급,부서번호,부서명을 조회하시오.
+
+select e.ename , e.job, d.deptno, d.dname 
+from emp e,dept d 
+where e.deptno = d.deptno and 
+      d.loc = 'DALLAS'
+
+
