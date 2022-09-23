@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <!-- {{username | length}}
+    {{username | upper}} -->
+    {% if username|length % 2 == 0 %}
+        {{username | upper}}님 환영합니다.
+    {% elif username|length % 2 == 1 %}
+        {{username | lower}}님 환영합니다.
+    {% endif %}
+    <!-- {{username}}님 환영합니다. --> 
+</body>
+{% endblock %}

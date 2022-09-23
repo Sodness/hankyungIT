@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <h1>구구단을 외자</h1>
+    <p>출력하고자 하는 구구단을 입력하세요.</p>
+    <form action="/gugudan" method="post">
+        <p>
+            <input type="text" name="dan">
+            <input type="submit" value="구구단 확인하기">
+        </p>
+    </form>
+    {{dan}} X 1 = {{dan}} * 1
+</body>
+{% endblock %}

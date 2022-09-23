@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <form action="/user/{{userid}}" method="post">
+        <p>이름 : {{username}} </p>
+        <p>전화번호 : <input type="tel" name="telno"></p>
+        <p >전화번호를 입력하고 제출버튼을 누르세요... 
+            <input class="btn btn-primary" type="submit">
+        </p>
+    </form>
+</body>
+{% endblock %}

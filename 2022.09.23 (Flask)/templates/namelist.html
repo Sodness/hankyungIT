@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <h1>user 님의 통계입니다.</h1>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr> 
+                <th>이름</th>
+                <th>아이디</th>
+                <th>레벨</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for i in user %}
+                    <td>{{i}}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>{{user[0]}}</td>
+                <td>{{user[1]}}</td>
+                <td>{{user[2]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+{% endblock %}

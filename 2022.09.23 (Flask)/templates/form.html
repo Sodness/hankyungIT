@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <form action="/login_process" method="post">
+        <p>이름 : <input type="text" name="username"></p>
+        <p>암호 : <input type="password" name="pwd"></p>
+        <p id="info">이름을 입력하고 제출버튼을 누르세요... <input class="btn btn-primary" type="submit"></p>
+    </form>
+</body>
+{% endblock %}
