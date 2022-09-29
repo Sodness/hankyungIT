@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>LSTM Deep Learning Model</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+       - cv2
+       - numpy
+       - os
+       - time
+       - mediapipe
+       - tensorflow.keras.models.load_model
+       - sklearn.model_selection.train_test_split
+       - tensorflow.keras.utils.to_categorical
+      </py-env>
+   </head>
+   <body>
+      <header>
+         <div class="container">
+            <h1 class="logo"> 221005 project [Two-One-Ki] team </h1>
+            <strong>
+               <nav>
+                  <ul class="menu">
+                     <li><a href="{{ url_for('index') }}">Home</a></li>
+                     <li><a href="{{ url_for('about') }}">About</a></li>
+                  </ul>
+               </nav>
+            </strong>
+         </div>
+      </header>
+
+      {% block content %}
+      {% endblock %}
+      <video id='result' width="720" height="480" controls></video>
+      
+      <py-script>
+         print('Hello!!')
+         
+         '''
+         1. 필요한거 설치
+         2. MP Holistic을 사용해 keypoints를 인식 (이미지 1개만)
+         3. keypoints 추출 및 저장 (pose, lh, rh, lh_a, rh_a) (이미지 1개만)
+         4. 폴더 생성
+         5. 데이터셋 생성
+         6. 라벨 생성 (지도 학습)
+         7. 모델 생성 및 LSTM 학습, tensorboard
+         8. 테스트 데이터로 예측
+         9. 가중치 저장
+         10. 혼동 행렬
+         11. 실제로 테스트
+         '''
+         # %pip install tensorflow==2.8.0 tensorflow-gpu==2.8.0 opencv2-python mediapipe sklearn matplotlib
+
+      </py-script>
+   </body>
+</html>
