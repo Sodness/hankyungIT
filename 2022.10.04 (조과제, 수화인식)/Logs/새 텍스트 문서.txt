@@ -1,0 +1,3 @@
+activate han
+cd C:\Users\user\Desktop\허미현 강사님\2022.10.04\ActionDetectionforSignLanguage-main\Logs\train
+tensorboard --logdir=.
