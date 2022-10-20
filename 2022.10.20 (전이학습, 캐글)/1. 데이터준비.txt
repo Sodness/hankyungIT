@@ -1,0 +1,6 @@
+1. C드라이브에 data폴더를 제작
+2. 다음사이트로 접속하여 자료를 다운받고 data폴더에 압축해제
+https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
+
+2. 다음사이트로 접속하여 자료를 다운받고 data폴더에 압축해제 
+https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
