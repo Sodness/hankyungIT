@@ -1,0 +1,8 @@
+1.캐글에 로그인한뒤 다음사이트에서 자료를 다운로드받아 압축을 해제합니다. (독일교통표지판)
+https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign?select=Train
+
+
+
+2. AI허브에서 로그인을 한뒤 자료를 다운로드합니다. (해양쓰레기)
+https://www.aihub.or.kr/dataprcuse/aiply/view.do?pageIndex=1&aiPlySn=16&currMenu=126&topMenu=102&dataTyCode=AIPLYDATA001&searchCondition=&searchKeyword=
+
