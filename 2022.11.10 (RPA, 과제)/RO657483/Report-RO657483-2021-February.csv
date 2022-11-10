@@ -1,0 +1,3 @@
+InvoiceNumber,Item,Amount,Tax,Total,Currency,Date
+232429,"Various paper supplies",140235,28047,168282,CAD,2017-02-05
+726516,"Professional Services",232935,46587,279522,RON,2017-02-14
