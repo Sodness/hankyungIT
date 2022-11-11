@@ -1,0 +1,5 @@
+InvoiceNumber,Item,Amount,Tax,Total,Currency,Date
+889651,"IT Support",108178,21635.6,129814,CAD,2017-01-07
+520680,"Beverages and Catering",187998,37599.6,225598,CAD,2017-01-05
+252354,"IT Support",67369,13473.8,80842.8,USD,2017-01-17
+647186,"Waste management services",265435,53087,318522,RON,2017-01-05
