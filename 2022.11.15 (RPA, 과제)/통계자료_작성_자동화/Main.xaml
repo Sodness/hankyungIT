@@ -1,0 +1,671 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1256,1036.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="51">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1266.4,972" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Dic_Config" />
+      <Variable x:TypeArguments="x:String" Name="Str_FiscalPath" />
+      <Variable x:TypeArguments="x:String" Name="Str_TemplateName" />
+      <Variable x:TypeArguments="x:String" Name="Str_Xlsx" />
+      <Variable x:TypeArguments="x:String" Name="Str_Csv" />
+      <Variable x:TypeArguments="x:String" Name="Str_ResultPath" />
+      <Variable x:TypeArguments="x:String" Name="Str_ResultReport" />
+      <Variable x:TypeArguments="x:String" Name="Str_CurrentYear" />
+      <Variable x:TypeArguments="x:String" Name="Str_LastYear" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_TemplateSheetNames" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_DownloadCategorys" />
+      <Variable x:TypeArguments="x:String" Name="Str_SourceDataPath" />
+      <Variable x:TypeArguments="x:String" Name="Str_DownloadExcel" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_Ministrys" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_Years" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_LastYear" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_CurrentYear" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Boolean)" Name="Dic_Excels_Exist" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_GeneralAccounts" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_ETC" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_ResultSheets" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_Category_Keys" />
+      <Variable x:TypeArguments="s:String[]" Name="AryStr_Category_ColumnValues" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Name="Dic_CategoryColumns" />
+      <Variable x:TypeArguments="x:String" Name="Str_CategoryKey" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="1204,848.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">100.00000000000001,42.4</av:Point>
+          <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+          <x:Double x:Key="Width">1170.0000000000002</x:Double>
+          <x:Double x:Key="Height">802.4</x:Double>
+          <av:PointCollection x:Key="ConnectorLocation">130,117.6 130,167.6</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID1</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">30.000000000000014,167.6</av:Point>
+            <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">130,260.4 130,310.4</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="STEP1_Init" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="Str_ConfigPath" />
+            <Variable x:TypeArguments="x:String" Name="Str_TemplatePath" />
+            <Variable x:TypeArguments="s:String[]" Name="AryStr_YearCellPositions" />
+            <Variable x:TypeArguments="x:String" Name="Str_OpenFiscalData_URL" />
+            <Variable x:TypeArguments="x:Int32" Name="Int_Idx" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;STEP1 Init Start&quot;]" />
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="435.2,141.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_ConfigPath]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">C:\RPA\Config\통계자료_작성_자동화_Config.xlsx</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Dic_Config]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(Of String, Object)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="000_Process_Common\ReadConfig.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="435.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="000_Process_Common\ReadConfig.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_ConfigPath">[Str_ConfigPath]</InArgument>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Dic_Config">[Dic_Config]</OutArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_StrArr_ConfigSheets">[{"Account", "Path", "Code", "Email"}]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:MultipleAssign DisplayName="공용 변수" sap:VirtualizedContainerService.HintSize="435.2,328.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_xlsx]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("xlsx").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_Csv]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("csv").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_CurrentYear]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("CurrentYear").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_LastYear]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("LastYear").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_Years]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[New String(){Str_LastYear, Str_CurrentYear}]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_TemplatePath]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("Template").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_ResultPath]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("Result").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_SourceDataPath]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("SourceData").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:MultipleAssign DisplayName="Template 변수" sap:VirtualizedContainerService.HintSize="435.2,204" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_TemplateName]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("TemplateName").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_ResultReport]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("ResultReport").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_TemplateSheetNames]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("TemplateSheetNames").ToString.Split(",")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_YearCellPositions]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("YearCellPositions").ToString.Split(",")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:MultipleAssign DisplayName="Open_Browswer 변수" sap:VirtualizedContainerService.HintSize="435.2,141.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_OpenFiscalData_URL]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("OpenFiscalData_URL").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_FiscalPath]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("FiscalPath").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:MultipleAssign DisplayName="엑셀 다운로드 관련 변수" sap:VirtualizedContainerService.HintSize="435.2,141.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_DownloadCategorys]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("DownloadCategorys").ToString.Split(",")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Str_DownloadExcel]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Dic_Config("DownloadExcel").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:MultipleAssign sap2010:Annotation.AnnotationText="STEP2_Process_Main/100_Process_Excel_Read_2Excels (out)&#xA;    - DT_LastYear&#xA;    - DT_CurrentYear&#xA;    - Dic_Excels_Exist&#xD;&#xA;400_Process_DataTable/400_Process_DataTable_SumByMinistryAndGeneralAccounts (out)&#xD;&#xA;    - DT_LastYear_GeneralAccounts&#xD;&#xA;    - DT_LastYear_ETC&#xD;&#xA;    - DT_CurrentYear_GeneralAccounts&#xD;&#xA;    - DT_CurrentYear_ETC" DisplayName="DT 전처리 관련 변수" sap:VirtualizedContainerService.HintSize="435.2,408" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_Ministrys]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("Ministrys").ToString.Split(",")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_ResultSheets]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("ResultSheets").ToString.Split(",")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_Category_Keys]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("Category_Keys").ToString.Split(",")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:String[]">[AryStr_Category_ColumnValues]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Dic_Config("Category_ColumnValues").ToString.Split("/")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_34">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[Dic_CategoryColumns]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[New Dictionary(Of String, String())]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MultipleAssign>
+          <ui:ForEach x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Dic_CategoryColumns 할당" CurrentIndex="[Int_Idx]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="435.2,358.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[AryStr_Category_Keys]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="key" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="400,192.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:String[]">[Dic_CategoryColumns(key)]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:String[]">[AryStr_Category_ColumnValues(Int_Idx).ToString.Split(",")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="100_Process_Excel\100_Process_Excel_Set_Template.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="435.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="100_Process_Excel\100_Process_Excel_Set_Template.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_TemplatePath">[Str_TemplatePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_TemplateName">[Str_TemplateName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_xlsx">[Str_Xlsx]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_ResultPath">[Str_ResultPath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_CurrentYear">[Str_CurrentYear]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_ResultReport">[Str_ResultReport]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_LastYear">[Str_LastYear]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_AryStr_TemplateSheetNames">[AryStr_TemplateSheetNames]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_AryStr_YearCellPositions">[AryStr_YearCellPositions]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="000_Process_Common\Open_Browser.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="435.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="000_Process_Common\Open_Browser.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Str_URL">[Str_OpenFiscalData_URL + Str_FiscalPath]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="200_Process_Fiscal_Select_TreeItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="200_Process_Fiscal\200_Process_Fiscal_Select_TreeItem.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="432,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;STEP1 Init End&quot;]" />
+        </Sequence>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID0">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">30.000000000000014,310.4</av:Point>
+                <av:Size x:Key="ShapeSize">200,168.8</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap2010:Annotation.AnnotationText="1. 2021, 2022 엑셀 다운&#xA;2. 소관명 필터링&#xA;3. 소관명 합계&#xA;4. 소관명 엑셀 출력" DisplayName="STEP2_Process_Main" sap:VirtualizedContainerService.HintSize="592,2026.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;STEP2_Process_Main Start&quot;]" />
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="세출/지출 8개" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529.6,1542.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[AryStr_DownloadCategorys]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="x:String">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="category" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="494.4,1376.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="432,111.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_35">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Str_CategoryKey]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["(" + category.Split("(")(1)]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                      </ui:MultipleAssign>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="000_Process_Common\Create_Folder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="000_Process_Common\Create_Folder.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Path">[Str_SourceDataPath + "\" + category]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="200_Process_Fiscal\200_Process_Fiscal_Download_2Excels.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="200_Process_Fiscal\200_Process_Fiscal_Download_2Excels.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_LastYear">[Str_LastYear]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_CurrentYear">[Str_CurrentYear]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Category">[category]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_SourceDataPath">[Str_SourceDataPath]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_DownloadExcel">[Str_DownloadExcel]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Xlsx">[Str_Xlsx]</InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="in_AryStr_Years">[AryStr_Years]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="100_Process_Excel\100_Process_Excel_Read_2Excels.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="100_Process_Excel\100_Process_Excel_Read_2Excels.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Path">[Str_SourceDataPath + "\" + category]</InArgument>
+                          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT_LastYear">[DT_LastYear]</OutArgument>
+                          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT_CurrentYear">[DT_CurrentYear]</OutArgument>
+                          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Boolean)" x:Key="out_Dic_Excels_Exist">[Dic_Excels_Exist]</OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Category">[category]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_LastYear">[Str_LastYear]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_CurrentYear">[Str_CurrentYear]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="400_Process_DataTable\400_Process_DataTable_FilterMinistrys.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="400_Process_DataTable\400_Process_DataTable_FilterMinistrys.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="in_AryStr_Ministrys">
+                            <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="AryStr_Ministrys" />
+                          </InArgument>
+                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inout_DT_LastYear">
+                            <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DT_LastYear" />
+                          </InOutArgument>
+                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inout_DT_CurrentYear">
+                            <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DT_CurrentYear" />
+                          </InOutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="100_Process_Excel\100_Process_Excel_Save_2FilteredDT.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="100_Process_Excel\100_Process_Excel_Save_2FilteredDT.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_LastYear">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_LastYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_CurrentYear">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_CurrentYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Path">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_SourceDataPath + &quot;\&quot; + category" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_LastYear">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_LastYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_CurrentYear">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_CurrentYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_DownloadExcel">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_DownloadExcel" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Category">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="category" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Xlsx">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_Xlsx" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="400_Process_DataTable\400_Process_DataTable_SumByMinistryAndGeneralAccounts.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="400_Process_DataTable\400_Process_DataTable_SumByMinistryAndGeneralAccounts.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="in_AryStr_Ministrys">
+                            <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="AryStr_Ministrys" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_LastYear">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_LastYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_CurrentYear">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_CurrentYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="out_DT_GeneralAccounts">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_GeneralAccounts" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="out_DT_ETC">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_ETC" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Category">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="category" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="in_Dic_CategoryColumns">
+                            <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="Dic_CategoryColumns" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_CategoryKey">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_CategoryKey" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="100_Process_Excel\100_Process_Excel_SumToResultTemplate.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="432,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="100_Process_Excel\100_Process_Excel_SumToResultTemplate.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_ResultPath">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_ResultPath" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_ResultReport">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_ResultReport" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_Xlsx">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_Xlsx" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_GeneralAccounts">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_GeneralAccounts" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_ETC">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_ETC" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_CurrentYear">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_CurrentYear" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Str_CategoryKey">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Str_CategoryKey" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="in_AryStr_ResultSheets">
+                            <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="AryStr_ResultSheets" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEach>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;STEP2_Process_Main End&quot;]" />
+            </Sequence>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <FlowStep>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">310,163.6</av:Point>
+            <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="DT_Tmp" />
+            <Variable x:TypeArguments="x:String" Name="Str_Tmp" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,312" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\RPA\통계자료_작성_자동화\Result\세출_지출_세목_세부사업_예산편성현황_2022.xlsx">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="400,192.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Tmp]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="C6" SheetName="세출_지출_세목_세부사업_탬플릿(추경포함)" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+          </ui:ExcelApplicationScope>
+          <ui:OutputDataTable DataTable="[DT_Tmp]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[Str_Tmp]" />
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,98.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Str_Tmp]" />
+        </Sequence>
+      </FlowStep>
+    </Flowchart>
+  </Sequence>
+</Activity>
