@@ -1,0 +1,7 @@
+set FLASK_APP=app
+set FLASK_DEBUG=True
+
+flask run
+
+flask db init (처음 한번만)
+flask db migrate (테이블 없으면 생성)
