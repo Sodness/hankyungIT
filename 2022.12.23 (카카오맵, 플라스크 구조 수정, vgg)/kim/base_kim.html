@@ -1,0 +1,41 @@
+<body data-home-page="About.html" data-home-page-title="About" class="u-body u-xl-mode" data-lang="sen">
+    <!-- Navbar -->
+    <header class="p-3 bg-dark text-white"  style="font-family:'Open Sans',sans-serif padding: 16px">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+              <li><a href="/" class="nav-link px-2 text-secondary" style="font-family:'Open Sans',sans-serif">Home</a></li>
+                {% if g.user %}
+                <li><a href="/process_wav" class="nav-link px-2 text-white" style="font-family:'Open Sans',sans-serif">AI 검증</a></li>
+                {% else %}
+                <li><a href="/auth/login" class="nav-link px-2 text-white" style="font-family:'Open Sans',sans-serif">AI 검증</a></li>
+                {% endif %}
+
+                <li><a href="/measure" class="nav-link px-2 text-white" style="font-family:'Open Sans',sans-serif">확진시 조치안내</a></li>
+                <li><a href="/dashboard" class="nav-link px-2 text-white" style="font-family:'Open Sans',sans-serif">코로나 예방접종현황</a></li>
+                <li><a href="/map" class="nav-link px-2 text-white" style="font-family:'Open Sans',sans-serif">근처 병원 찾기</a></li>
+            </ul>
+
+
+                {% if g.user %}
+              <h7 class="card-header d-flex justify-content-between align-items-center mx-3 text-info" style="font-family:'Open Sans',sans-serif">{{ g.user.username }}님 환영합니다.</h7>
+              <button type="button" class="btn btn-outline-light me-2" onclick="location.href='/auth/logout'">Logout</button>
+                {% else %}
+            <div class="text-end">
+
+              <button type="button" class="btn btn-outline-light me-2" onclick="location.href='/auth/login'" style="font-family:'Open Sans',sans-serif">Login</button>
+              <button type="button" class="btn btn-warning" onclick="location.href='/auth/signup'" style="font-family:'Open Sans',sans-serif">Sign-up</button>
+
+
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </header>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
