@@ -1,0 +1,62 @@
+<김영원>
+데이터 전처리			O (결측치, 이상치 제거)
+모델 재생성			O (output 2, JPG)
+jpg 파일 재생성			O
+
+<정호영>
+챗봇 데이터 전처리			O
+챗봇 플라스크 연결			O
+챗봇 설계				O
+
+<김혜원>
+코로나 부트스트랩 적용		O
+코로나 현황판 (UiPath 필요)		O
+코로나 예측 결과 페이지(프로펫)	/
+
+
+
+웹페이지 구성 추가			O
+챗봇 설계 구체적으로		O
+병원 지도 페이지			O
+녹음화면 구성 어떻게		O
+데이터 분석 리더보드 (현황판)	O
+header 맞추기			O
+챗봇 ai 추가			O
+로그인 일때만 녹음			O
+현황판 기초접종 추가		O
+header 드롭다운 메뉴		X
+UiPath 오케스트레이터		O
+게시판				/
+vgg 모델 실행			O
+csv파일 코로나현황판 연결		O
+플라스크 지도 수정			O
+코로나 관련 데이터 Q&A		/
+base 수정			O
+모델 실행하고 기록(seed값 고정)	O
+플라스크 정리			O
+
+
+
+ppt 피드백			O
+ppt				=
+모델 히스토리 (빠르게 pt화)		=
+코로나 걸리기 전 후 목소리 유사도	=
+매일 녹음해서 결과 히스토리 저장	=
+코로나 예측 결과 페이지(프로펫)	=
+게시판				=
+코로나 관련 데이터 Q&A (페이지)	=
+논문 음향사용 근거			=
+데이터 증강			=
+
+
+
+https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53
+https://blog.naver.com/PostView.naver?blogId=pakseung98&logNo=222318465476&from=search&redirect=Log&widgetTypeCall=true&directAccess=false
+https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/cnn/cnn-vgg16.ipynb
+
+1. 녹음하기 버튼을 눌러서 기침소리를 녹음해주세요.
+2. 결과보러가기를 눌러 결과를 확인해주세요.
+3. 더 정확한 병원 진료를 원하신다면 병원지도로 주변 병원을 확인해주세요.
+
+
+
