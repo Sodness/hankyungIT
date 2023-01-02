@@ -1,0 +1,28 @@
+#4 resnet34_seed
+
+결측치, 이상치 제거
+train 데이터 늘려서
+JPG 이미지 사용
+RandomHorizontalFlip() 제거
+seed 값 고정
+데이터 증강 (white_noise, shifting, stretching) 
+Tensorboard 정리 및 test 곡선 추가 해서 에포크 어디서 끊을지 확인
+
+<train>
+음성 : 1005개
+양성 : 999개
+<test>
+음성 : 2985개
+양성 : 53개
+
+num_epochs = 200
+batch_size=4
+lr=0.001, momentum=0.9
+num_workers=4
+출력 뉴런 수=2
+
+==============================================
+
+
+==============================================
+[Test Phase] Loss: 17.9033 Acc: 10.5662% Time: 9.5467s
